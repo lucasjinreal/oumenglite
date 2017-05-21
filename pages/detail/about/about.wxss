@@ -1,0 +1,19 @@
+.header-wrapper{
+    height: 400rpx;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+.header-logo{
+    width: 80rpx;
+    height: 80rpx;
+    margin-bottom: 20rpx;
+    margin-top: 140rpx;
+}
+.brand{
+    margin-top: 10rpx;
+}
+.version{
+    font-size: 30rpx;
+    color: #BFBFBC;
+}

@@ -1,0 +1,246 @@
+<view class="page">
+  <view class="page__bd">
+    <form bindsubmit="bindFormSubmit">
+    <view class="weui-cells__title">填写上传者信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入姓名" name="uploader_name" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" >你们的关系</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="如同学，室友，死党" name="uploader_candidate_relation"/>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">学校</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入学校" name="uploader_school"/>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">性别</view>
+        </view>
+        <!--为了form提交picker下面的改为input把-->
+        <view class="weui-cell__bd">
+          <picker bindchange="bindUploaderGenderChange" value="{{genderIndex}}" range="{{genders}}">
+            <input class="weui-input" disable="true" value="{{genders[genderIndex]}}" name="uploader_gender"/>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">微信号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入微信号" name="uploader_wechat"/>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">手机号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入手机号" name="uploader_phone"/>
+        </view>
+      </view>
+  
+      <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__hd">
+            <view class="weui-uploader__title">上传校园卡认证照片</view>
+            <view class="weui-uploader__info">{{uploaderCampusCardFiles.length}}/1</view>
+          </view>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for-items="{{uploaderCampusCardFiles}}" wx:key="{{index}}">
+                <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                </view>
+              </block>
+            </view>
+            <view class="weui-uploader__input-box">
+              <view class="weui-uploader__input" bindtap="chooseCampusCard"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view> 
+    </view>
+    <view class="weui-cells__tips">上传者信息不会展示在首页，仅联系用</view>
+
+    <view class="weui-cells__title">填写基友(闺蜜)信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入姓名" name="candidate_name"/>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">性别</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindCandidateGenderChange" value="{{genderIndex}}" range="{{genders}}">
+            <input class="weui-input" value="{{genders[genderIndex]}}" name="candidate_gender" disable="true" />
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">生日</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <input class="weui-input" disable="true" value="{{date}}" name="candidate_birthday"/>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">学校</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入学校" name="candidate_school"/>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">家乡</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入家乡" name="candidate_home"/>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">年级</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindGradeChange" value="{{gradeIndex}}" range="{{grades}}">
+            <input class="weui-input" disable="true" value="{{grades[gradeIndex]}}" name="candidate_grade" />
+          </picker>
+        </view>
+      </view>
+      
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">微信号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入微信号" name="candidate_wechat"v/>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">QQ号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入QQ号" name="candidate_QQ"/>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">手机号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入手机号" name="candidate_phone"/>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__tips">以上信息欧萌不会透露给任何第三方，放心填写</view>
+
+    <view class="weui-cells__title">TA的介绍</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" bindblur="bindInputDescribe" placeholder="尽量牛逼的表述" style="min-height: 3.3em" auto-height/>
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+    </view>
+
+     <view class="weui-cells__title">你对基友(闺蜜)的评价</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" bindblur="bindInputAppraise" placeholder="多说些溢美之词" style="min-height: 3.3em" auto-height/>
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">TA的要求</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" bindblur="bindInputExpect" placeholder="闺蜜(基友)对对方的要求，可以适当放宽些哟" style="min-height: 3.3em" auto-height/>
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__hd">
+              <view class="weui-uploader__title">上传TA的照片</view>
+              <view class="weui-uploader__info">{{candidatePhotoFiles.length}}/5</view>
+            </view>
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for-items="{{candidatePhotoFiles}}" wx:key="{{index}}">
+                  <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+              </view>
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseCandidatePhoto"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <checkbox-group bindchange="bindAgreeChange">
+      <label class="weui-agree" for="weuiAgree">
+        <view class="weui-agree__text">
+          <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+          <view class="weui-agree__checkbox-icon">
+            <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+          </view>
+          我已获得对方同意上传信息，并同意
+          <navigator url="" class="weui-agree__link">《相关条款》</navigator>
+        </view>
+      </label>
+    </checkbox-group>
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" loading="{{isLoading}}" form-type="submit">{{submitButtonText}}</button>
+    </view>
+     </form>
+  </view>
+ 
+  <view class="footer">
+    <view class="weui-agree__text">
+      <icon type="safe_success" size="12" style="vertical-align: middle"/>
+      <navigator url="" class="weui-agree__link"> 欧曼神盾局</navigator>
+      为用户信息保驾护航
+    </view>
+    
+  </view>
+</view>

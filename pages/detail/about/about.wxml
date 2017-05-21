@@ -1,0 +1,23 @@
+<view class="page">
+  <view class="page__bd page__bd_spacing">
+    <view class="weui-panel__bd">
+
+      <view class="header-wrapper">
+        <image src="http://ommwypwud.bkt.clouddn.com/logo.png" class="header-logo"></image>
+        <view class="brand">欧萌Lite</view>
+        <view class="version">v 1.0</view>
+      </view>
+
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-article__p">欧萌Lite是中南大学学生团队打造的长沙大学城近距离线下社交平台，我们希望将一种乐观，积极，崇尚信仰的 精神传达给每一位朝气蓬勃的年轻人，你们不仅有学习和苟且，还有诗和远方，让我们借助欧萌Lite这个平台，去认识和发现更多有趣的人
+        </view>
+      </view>
+    </view>
+    <view class="weui-footer weui-footer_fixed-bottom">
+      <view class="weui-footer__links">
+        <navigator url="" class="weui-footer__link">了解更多信息，请浏览欧曼官网</navigator>
+      </view>
+      <view class="weui-footer__text">Copyright © 2015-2017 欧曼科技</view>
+    </view>
+  </view>
+</view>

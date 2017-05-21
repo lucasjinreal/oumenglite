@@ -1,0 +1,14 @@
+<view class="page">
+  <view class="header">
+    <view>
+      <image src="http://ommwypwud.bkt.clouddn.com/iconfont-camera.svg" class="header-logo"></image>
+    </view>
+    <view class="header-text">欧萌帮基友(闺蜜)找对象平台旨在为大家挖掘优质的单身资源，为男女比例严重失调的高校搭建一个有机会结实对方的平台，所有上传信息都需经过欧萌官方认证才会在首页显示，上传信息前请确保已征得对方同意。</view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <navigator url="./uploadform/uploadform">
+      <button class="weui-btn" type="primary" bindtap="onTapUpload">上传信息</button>
+    </navigator>
+    <button class="weui-btn" type="default">稍后再说</button>
+  </view>
+</view>

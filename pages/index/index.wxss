@@ -1,0 +1,37 @@
+.container{
+    width: 100%;
+}
+swiper{
+    height: 400rpx;
+}
+swiper-item image{
+    width: 100%;
+    height: 100%;
+}
+.line-text {
+  font-size: 14px;
+  border-left: 2px solid #7EAA35;
+  padding-left: 5px;
+  margin: 10px 10px;
+  color: #7EAA35;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.people{
+     margin: 15rpx 15rpx 35rpx 15rpx;
+    height: 250rpx;
+    width: 200rpx;
+    color: #cfcfcf;
+    font-size: 22rpx;
+    text-align: center;
+    background-color: #7EAA35;
+}
+.people-image{
+    height: 250rpx;
+    width: 200rpx;
+}

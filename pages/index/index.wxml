@@ -1,0 +1,40 @@
+
+<!--index.wxml-->
+<view class="page">
+  <swiper indicator-dots="true" autoplay="true" interval="4000" duration="600" style="height:{{systemInfo.windowWidth/2}}px">
+    <block wx:for="{{swipers}}" wx:key="swipersId">
+      <swiper-item>
+        <image src="{{item.pic}}" class="slide-image" width="750" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+   <view class="line-text">
+   帮闺蜜(基友)找对象
+  </view>
+
+  <view class="flex-container" >
+   
+   <view class="people" wx:for="{{people}}" wx:key="peopleId">
+   <block>
+   <navigator url="./peopledetail/peopledetail">
+   <image  class="people-image" src="{{item.image}}" mode="aspectFill"></image>
+   </navigator>
+   <view>{{item.name}} {{item.school}}</view>
+   </block>
+   </view>
+    
+
+  </view>
+
+  <view class="line-text">
+    大学周边
+  </view>
+
+  <view class="flex-container">
+   
+   
+     
+  </view>
+
+</view>

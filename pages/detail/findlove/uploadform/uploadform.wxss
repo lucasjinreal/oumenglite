@@ -1,0 +1,9 @@
+.page__ft-icon{
+    margin-top: 60rpx;
+}
+.footer{
+    width: 100%;
+    margin: 40rpx auto 10rpx auto;
+    text-align: center;
+    font-size: 28rpx;
+}

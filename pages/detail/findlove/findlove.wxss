@@ -1,0 +1,19 @@
+.header{
+    margin: 60rpx auto 60rpx auto;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 100rpx;
+}
+.header-logo{
+    width: 60rpx;
+    height: 60rpx;
+    margin-top: 100rpx;
+    text-align: center;
+}
+.header-text{
+    width: 80%;
+    margin: 60rpx auto 30rpx auto;
+    text-align: center;
+    font-size: 28rpx;
+    color: #858585;
+}

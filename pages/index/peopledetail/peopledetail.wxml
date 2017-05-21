@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="header_wrapper">
+    <image class="avatar" src="http://img2.imgtn.bdimg.com/it/u=465735542,3222513942&fm=23&gp=0.jpg"></image>
+    <text class="header_name">菲菲</text>
+    <text class="header_describe">湖南大学 研究生</text>
+  </view>
+  <view class="line-text">
+    TA的美照
+  </view>
+  <view class="section">
+    <image class="section_photo" src="http://img2.imgtn.bdimg.com/it/u=465735542,3222513942&fm=23&gp=0.jpg" mode="aspectFill" />
+    <image class="section_photo" src="http://img2.imgtn.bdimg.com/it/u=465735542,3222513942&fm=23&gp=0.jpg" mode="aspectFill" />
+  </view>
+  <view class="line-text">
+    关于TA
+  </view>
+  <view class="line-text">
+    TA的要求
+  </view>
+  <view class="line-text">
+    TA的兴趣爱好
+  </view>
+  <view class="footer">
+    <view class="hint">为了用户信息安全，要获取联系方式，只需要联系萌萌，关注公众号回复TA对应的编号即可获取，或者直接向萌萌索要</view>
+    <button class="weui-btn" type="primary">去公众号获取</button>
+    <button class="weui-btn" type="default">找萌萌要TA微信号</button>
+  </view>
+</view>

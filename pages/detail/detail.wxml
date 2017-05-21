@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+
+    <navigator url="./findlove/findlove" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="http://ommwypwud.bkt.clouddn.com/iconfont-camera.svg" style="margin-right: 5px;vertical-align: middle;width:17px; height: 17px;"></image>
+      </view>
+      <view class="weui-cell__bd">找对象</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
+    <navigator url="./findlove/findlove" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="http://ommwypwud.bkt.clouddn.com/iconfont-meishu.svg" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view class="weui-cell__bd">消息</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
+    <navigator url="./findlove/findlove" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="http://ommwypwud.bkt.clouddn.com/iconfont-zuji2.svg" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view class="weui-cell__bd">报名的活动</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
+    <navigator url="./about/about" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="http://ommwypwud.bkt.clouddn.com/iconfont-fengcai.svg" style="margin-right: 5px;vertical-align: middle;width:17px; height: 17px;"></image>
+      </view>
+      <view class="weui-cell__bd">关于</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
+
+  </view>
+
+</view>

@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/peopledetail/peopledetail",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/detail/findlove/findlove",
+    "pages/detail/findlove/uploadform/uploadform",
+    "pages/detail/messages/messages",
+    "pages/detail/about/about",
+    "pages/detail/myactivity/myactivity"
+  ],
+
+
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "欧曼校园Lite",
+    "navigationBarTextStyle":"black"
+  },
+
+  "tabBar": {
+    "color": "#aaaaa8",
+    "selectedColor": "#7EAA35",
+    "backgroundColor": "#fff",
+    "borderStyle":"black",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/home_u.png",
+      "selectedIconPath": "images/home_s.png"
+    },{
+      "pagePath": "pages/detail/detail",
+      "text": "发现",
+      "iconPath": "images/detail_u.png",
+      "selectedIconPath": "images/detail_s.png"
+    }]
+  }
+
+}
